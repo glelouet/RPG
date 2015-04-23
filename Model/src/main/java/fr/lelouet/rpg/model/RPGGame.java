@@ -22,7 +22,8 @@ public interface RPGGame {
 	 * many synchronization calls. In case we need several IDs, calling
 	 * {@link #reserveIds(long[])} may be more efficient.
 	 *
-	 * @return a new long higher than any already returned before
+	 * @return a new long higher than any already returned before, and not null
+	 *         (min is 1)
 	 */
 	public long nextId();
 
@@ -95,6 +96,17 @@ public interface RPGGame {
 			parent.recycleIds(buffer, idx + 1, size - 1);
 		}
 
+	}
+
+	/**
+	 *
+	 * @param vit
+	 *          the vitality of a character
+	 * @return the number of HPs associated to given value of vitality ; default
+	 *         is 10*vit
+	 */
+	public default int maxHPs(int vit) {
+		return vit * 10;
 	}
 
 }

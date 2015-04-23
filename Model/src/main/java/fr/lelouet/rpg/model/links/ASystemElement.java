@@ -15,9 +15,16 @@ public abstract class ASystemElement implements SystemElement {
 		this(game, game.nextId());
 	}
 
+	/**
+	 * create a new element with given game container and id inside the game. if
+	 * id==0, a request for new Id is made.
+	 *
+	 * @param game
+	 * @param id
+	 */
 	public ASystemElement(RPGGame game, long id) {
 		this.game = game;
-		this.id = id;
+		this.id = id == 0 ? game.nextId() : id;
 	}
 
 	@Override

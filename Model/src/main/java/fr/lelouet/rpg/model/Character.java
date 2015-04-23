@@ -1,8 +1,8 @@
 package fr.lelouet.rpg.model;
 
-import fr.lelouet.rpg.model.links.ASystemElement;
+import fr.lelouet.rpg.model.character.CharStats;
 
-public class Character extends ASystemElement {
+public class Character extends CharStats {
 
 	public Character(RPGGame system) {
 		super(system);
@@ -15,9 +15,5 @@ public class Character extends ASystemElement {
 	public boolean isPlayer() {
 		return true;
 	}
-
-	protected int dex = 0;
-
-	protected int pow = 0;
 
 }
