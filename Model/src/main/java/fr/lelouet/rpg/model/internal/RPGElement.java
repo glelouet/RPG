@@ -1,8 +1,8 @@
-package fr.lelouet.rpg.model.links;
+package fr.lelouet.rpg.model.internal;
 
 import fr.lelouet.rpg.model.RPGGame;
 
-public interface SystemElement {
+public interface RPGElement {
 
 	RPGGame system();
 

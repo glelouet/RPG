@@ -16,4 +16,6 @@ public class Character extends CharStats {
 		return true;
 	}
 
+	public int lvl;
+
 }

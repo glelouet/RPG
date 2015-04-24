@@ -1,18 +1,18 @@
-package fr.lelouet.rpg.model.links;
+package fr.lelouet.rpg.model.internal;
 
 import fr.lelouet.rpg.model.RPGGame;
 
-public abstract class ASystemElement implements SystemElement {
+public abstract class ARPGElement implements RPGElement {
 
 	@SuppressWarnings("unused")
-	private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(ASystemElement.class);
+	private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(ARPGElement.class);
 
 	protected RPGGame game;
 
 	protected long id;
 
-	public ASystemElement(RPGGame game) {
-		this(game, game.nextId());
+	public ARPGElement(RPGGame game) {
+		this(game, game.id().nextId());
 	}
 
 	/**
@@ -22,9 +22,9 @@ public abstract class ASystemElement implements SystemElement {
 	 * @param game
 	 * @param id
 	 */
-	public ASystemElement(RPGGame game, long id) {
+	public ARPGElement(RPGGame game, long id) {
 		this.game = game;
-		this.id = id == 0 ? game.nextId() : id;
+		this.id = id == 0 ? game.id().nextId() : id;
 	}
 
 	@Override

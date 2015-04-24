@@ -4,7 +4,7 @@
 package fr.lelouet.rpg.model.character;
 
 import fr.lelouet.rpg.model.RPGGame;
-import fr.lelouet.rpg.model.links.ASystemElement;
+import fr.lelouet.rpg.model.internal.ARPGElement;
 
 /**
  * A set of Stats that define a character,
@@ -12,7 +12,7 @@ import fr.lelouet.rpg.model.links.ASystemElement;
  * @author Guillaume Le Louët [guillaume.lelouet@gmail.com] 2015
  *
  */
-public class CharStats extends ASystemElement {
+public class CharStats extends ARPGElement {
 
 	public CharStats(RPGGame game) {
 		super(game);
